@@ -1,6 +1,5 @@
 const input = ["Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"]
-const output = ["Prodo telah masuk.", "Ryan telah masuk.", "Prodo telah pergi.", "Prodo telah masuk."]
-
+const output = ["Prodo came in.", "Ryan came in.", "Prodo has left.", "Prodo came in."]
 
 function solution(record) {
     var answer = [];
@@ -12,20 +11,20 @@ function solution(record) {
         if(type === 'Enter' && !answer.includes(id)){  
            let user = {
                id: id,
-               data: `${name} telah masuk`
+               data: `${name} come in.`
            }     
            answer.push(user);
            for(let y = 0;y<answer.length;y++) {
                if(answer[y].id === id) {
                    let user = {
                        id: id,
-                       data: `${name} telah masuk.`
+                       data: `${name} came in.`
                    }
                    answer[y] = user;
                } else if(answer[y].id === 'Leave') {
                 let user = {
                     id: id,
-                    data: `${name} telah pergi.`
+                    data: `${name} has left.`
                 }
                 answer[y] = user;
                }
@@ -38,7 +37,7 @@ function solution(record) {
                    if(id === splitIdAnswer[z]) {
                     let user = {
                         id: `Leave`,
-                        data: `${splitAnswer[0]} telah pergi`,
+                        data: `${splitAnswer[0]} has left.`,
                     }  
                     answer.push(user);
                    }
@@ -50,7 +49,7 @@ function solution(record) {
                 if(id === splitChangeIdName) {
                     let changeName = {
                         id: id,
-                        data: `${name} telah masuk`
+                        data: `${name} come in.`
                     }
                     answer[k] = changeName;
                 }

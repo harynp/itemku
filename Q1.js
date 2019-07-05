@@ -56,10 +56,7 @@ function solution(record) {
             }
         }
     }
-    for(let m=0;m<answer.length;m++) {
-        answer[m] = answer[m].data;
-    }
-   
+    answer = answer.map(officer => officer.data);
     return answer;
 }
 

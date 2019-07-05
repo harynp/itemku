@@ -2,4 +2,4 @@
 
 for running 
 
-node <FILE>.js
+node FILE.js

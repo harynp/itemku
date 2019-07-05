@@ -25,8 +25,7 @@ function solution(N, users) {
         }
         return a.stage < b.stage ? -1 : 1;
     }
-    answer.sort(compare);
-    return answer.map(item => item.stage);
+    return answer.sort(compare).map(item => item.stage);
   }
 
 console.log(solution(5,[2,1,2,6,2,4,3,3]))
